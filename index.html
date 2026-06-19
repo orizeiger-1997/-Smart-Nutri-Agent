@@ -227,6 +227,7 @@ p.lead{font-size:15px;color:var(--gray2);line-height:1.75;max-width:560px;}
   <button class="nav-dot" onclick="goSlide(9)"></button>
   <button class="nav-dot" onclick="goSlide(10)"></button>
   <button class="nav-dot" onclick="goSlide(11)"></button>
+  <button class="nav-dot" onclick="goSlide(12)"></button>
 </nav>
 <div class="nav-arrows">
   <button class="nav-arrow" onclick="prevSlide()">↑</button>
@@ -267,12 +268,12 @@ p.lead{font-size:15px;color:var(--gray2);line-height:1.75;max-width:560px;}
       <div class="card" style="border-color:rgba(248,113,113,0.3);">
         <span class="card-icon">😮‍💨</span>
         <div class="tag tag-red" style="margin-bottom:8px;">ירידה בביצועים ובמוטיבציה</div>
-        <div class="card-body">דילוג על ארוחות מוביל לירידה בריכוז ובאנרגיה — <strong style="color:var(--white);">כ-60 שעות / עובד / שנה</strong> אבודות.</div>
+        <div class="card-body">דילוג על ארוחות מוביל לירידה בריכוז ובאנרגיה — <strong style="color:var(--white);">כ-60 שעות לעובד בשנה</strong> אבודות.</div>
       </div>
       <div class="card" style="border-color:rgba(248,113,113,0.3);">
         <span class="card-icon">💸</span>
         <div class="tag tag-red" style="margin-bottom:8px;">עלות מיותרת</div>
-        <div class="card-body">כל עובד מזמין בנפרד — דמי משלוח כפולים מדי יום, עלות מוכחת לארגון.</div>
+        <div class="card-body">כל עובד מזמין בנפרד — דמי משלוח כפולים מדי יום.</div>
       </div>
     </div>
     <div class="stat-row">
@@ -292,8 +293,8 @@ p.lead{font-size:15px;color:var(--gray2);line-height:1.75;max-width:560px;}
     <p class="lead" style="margin-bottom:0;">ללא צורך בהתערבות ידנית. מה שלקח 15 דקות קורה לבד.</p>
     <div class="card-grid g2">
       <div class="card"><span class="card-icon">📅</span><div class="card-title">Google Calendar API</div><div class="card-body">זיהוי חלון פנוי משותף — Free/Busy בלבד, ללא חשיפת תוכן הפגישות.</div></div>
-      <div class="card"><span class="card-icon">🤖</span><div class="card-title">AI Engine (LLM)</div><div class="card-body">המלצה מותאמת אישית בהתאם להעדפות, זמינות, ומדיניות הארגון.</div></div>
-      <div class="card"><span class="card-icon">🛵</span><div class="card-title">Wolt Order Pooling</div><div class="card-body">הזמנה קבוצתית מאוחדת — חיסכון משמעותי בדמי משלוח.</div></div>
+      <div class="card"><span class="card-icon">🤖</span><div class="card-title">AI Engine (LLM)</div><div class="card-body">המלצה מותאמת אישית בהתאם להעדפות מתוך שאלון ראשוני וזמינות.</div></div>
+      <div class="card"><span class="card-icon">🛵</span><div class="card-title">Shared Wolt Order</div><div class="card-body">הזמנה קבוצתית מאוחדת — חיסכון משמעותי בדמי משלוח.</div></div>
       <div class="card" style="border-color:rgba(52,211,153,0.35);background:rgba(52,211,153,0.05);"><span class="card-icon">🤝</span><div class="card-title">Human-in-the-Loop</div><div class="card-body">AI ממליץ — <strong style="color:var(--green);">העובד מאשר</strong> לפני כל הזמנה. שליטה מלאה בידי האדם.</div></div>
     </div>
   </div>
@@ -307,20 +308,20 @@ p.lead{font-size:15px;color:var(--gray2);line-height:1.75;max-width:560px;}
     <h2>זרימת הסוכן — Agent Flow</h2>
     <p class="lead" style="margin-bottom:0;">כל שלב כולל Fallback מובנה — המערכת ממשיכה לפעול גם כשרכיב חיצוני לא זמין.</p>
     <div class="flow">
-      <div class="flow-step"><span class="flow-icon">🛵</span><div class="flow-title">הזמנת Wolt</div><div class="flow-sub">Group Order + Fallback</div></div>
-      <div class="flow-arrow">›</div>
-      <div class="flow-step highlight"><span class="flow-icon">🔔</span><div class="flow-title">Push + אישור</div><div class="flow-sub">Human-in-the-Loop</div></div>
-      <div class="flow-arrow">›</div>
-      <div class="flow-step"><span class="flow-icon">🧠</span><div class="flow-title">מנוע AI</div><div class="flow-sub">LLM · JSON Schema</div></div>
+      <div class="flow-step"><span class="flow-icon">⏰</span><div class="flow-title">Cron Trigger</div><div class="flow-sub">09:00 בכל יום</div></div>
       <div class="flow-arrow">›</div>
       <div class="flow-step"><span class="flow-icon">📅</span><div class="flow-title">סריקת יומן</div><div class="flow-sub">FreeBusy · OAuth 2.0</div></div>
       <div class="flow-arrow">›</div>
-      <div class="flow-step"><span class="flow-icon">⏰</span><div class="flow-title">Cron Trigger</div><div class="flow-sub">09:00 בכל יום</div></div>
+      <div class="flow-step"><span class="flow-icon">🧠</span><div class="flow-title">מנוע המלצות (AI)</div><div class="flow-sub">LLM מתבסס על שאלון ראשוני</div></div>
+      <div class="flow-arrow">›</div>
+      <div class="flow-step highlight"><span class="flow-icon">🔔</span><div class="flow-title">Push + אישור</div><div class="flow-sub">Human-in-the-Loop</div></div>
+      <div class="flow-arrow">›</div>
+      <div class="flow-step"><span class="flow-icon">🛵</span><div class="flow-title">הזמנת Wolt</div><div class="flow-sub">Group Order + Fallback</div></div>
     </div>
     <div class="card-grid g3" style="margin-top:18px;">
-      <div class="card" style="padding:12px 14px;"><div class="tag tag-amber" style="margin-bottom:6px;">כשל ב-AI</div><div class="card-body" style="font-size:11px;">Push ידנית ללא המלצה · Audit Log לכל החלטה</div></div>
+      <div class="card" style="padding:12px 14px;"><div class="tag tag-amber" style="margin-bottom:6px;">כשל ב-AI</div><div class="card-body" style="font-size:11px;">Push ידני ללא המלצה — העובד בוחר בעצמו מתוך העדפות השאלון הראשוני</div></div>
       <div class="card" style="padding:12px 14px;"><div class="tag tag-amber" style="margin-bottom:6px;">כשל ב-Wolt</div><div class="card-body" style="font-size:11px;">Retry ×3 → Order_ID + קישור שירות לקוחות</div></div>
-      <div class="card" style="padding:12px 14px;"><div class="tag tag-amber" style="margin-bottom:6px;">שינוי ביומן</div><div class="card-body" style="font-size:11px;">בדיקת Free/Busy מחדש — ביטול אוטומטי</div></div>
+      <div class="card" style="padding:12px 14px;"><div class="tag tag-amber" style="margin-bottom:6px;">כשל בסריקת יומנים</div><div class="card-body" style="font-size:11px;">בדיקת Free/Busy מחדש — ביטול אוטומטי</div></div>
     </div>
   </div>
 </section>
@@ -332,9 +333,9 @@ p.lead{font-size:15px;color:var(--gray2);line-height:1.75;max-width:560px;}
     <div class="slide-tag">ערך מוסף</div>
     <h2>מי מרוויח — ומה</h2>
     <div class="value-cols">
-      <div class="value-col" style="border-color:rgba(0,212,255,0.3);"><div class="value-col-head"><span>👥</span> עובדי הארגון</div><ul><li>חיסכון של 15 דקות ביום</li><li>פחות עייפות החלטות</li><li>המלצות אישיות משתפרות</li><li>שמירה על רצף תזונתי תקין</li></ul></div>
-      <div class="value-col" style="border-color:rgba(52,211,153,0.3);"><div class="value-col-head"><span>🏢</span> הארגון</div><ul><li>חיסכון בעלויות — Order Pooling</li><li>שיפור שימור עובדים</li><li>מינוף Google Calendar קיים</li><li>תובנות עסקיות מהזמנות</li></ul></div>
-      <div class="value-col" style="border-color:rgba(167,139,250,0.3);"><div class="value-col-head"><span>🛵</span> Wolt</div><ul><li>עלייה בשיעורי המרה</li><li>הזמנות מתוזמנות מראש</li><li>ויסות עומס צי השליחים</li><li>צמצום "לא בבית" במשלוח</li></ul></div>
+      <div class="value-col" style="border-color:rgba(0,212,255,0.3);"><div class="value-col-head"><span>👥</span> עובדי הארגון</div><ul><li>חיסכון של 15 דקות ביום</li><li>קבלת החלטות ממוקדת</li><li>המלצות אישיות משתפרות</li><li>שמירה על רצף תזונתי תקין</li><li>חיסכון בעלויות משלוח</li></ul></div>
+      <div class="value-col" style="border-color:rgba(52,211,153,0.3);"><div class="value-col-head"><span>🏢</span> הארגון</div><ul><li>תפוקה יומית של העובדים משתפרת</li><li>תורם לגיבוש בין העובדים בחברה</li><li>צמצום תנועת גורמים חיצוניים (שליחים) בתוך הארגון</li></ul></div>
+      <div class="value-col" style="border-color:rgba(167,139,250,0.3);"><div class="value-col-head"><span>🛵</span> Wolt</div><ul><li>עלייה בשיעורי המרה</li><li>הזמנות מתוזמנות מראש</li><li>ויסות עומס צי השליחים</li><li>עלייה ברמת הזמינות לשליחים</li></ul></div>
     </div>
   </div>
 </section>
@@ -361,14 +362,14 @@ p.lead{font-size:15px;color:var(--gray2);line-height:1.75;max-width:560px;}
     <div class="slide-tag">מדדי הצלחה</div>
     <h2>KPIs — איך נדע שהצלחנו?</h2>
     <table class="kpi-table">
-      <thead><tr><th>מדד</th><th style="text-align:center;">Baseline</th><th style="text-align:center;">יעד</th><th>שיטת מדידה</th></tr></thead>
+      <thead><tr><th>מדד</th><th style="text-align:center;">מצב קיים</th><th style="text-align:center;">יעד</th><th>שיטת מדידה</th></tr></thead>
       <tbody>
-        <tr><td class="kpi-name">⏱ זמן תיאום ארוחה</td><td class="kpi-base" style="text-align:center;">15–20 דק' / יום</td><td class="kpi-target" style="text-align:center;">&lt; 2 דקות</td><td style="color:var(--gray2);font-size:12px;">סקר משתמשים חודשי</td></tr>
-        <tr><td class="kpi-name">🤖 דיוק המלצות AI</td><td class="kpi-base" style="text-align:center;">N/A</td><td class="kpi-target" style="text-align:center;">&gt; 90%</td><td style="color:var(--gray2);font-size:12px;">השוואת AI לבחירה בפועל</td></tr>
-        <tr><td class="kpi-name">💰 חיסכון דמי משלוח</td><td class="kpi-base" style="text-align:center;">18₪ / הזמנה</td><td class="kpi-target" style="text-align:center;">&lt; 12₪</td><td style="color:var(--gray2);font-size:12px;">חשבוניות Wolt חודשיות</td></tr>
-        <tr><td class="kpi-name">👥 השתתפות קבוצתית</td><td class="kpi-base" style="text-align:center;">&lt; 40%</td><td class="kpi-target" style="text-align:center;">&gt; 75%</td><td style="color:var(--gray2);font-size:12px;">לוג הזמנות מהסוכן</td></tr>
-        <tr><td class="kpi-name">😊 CSAT שביעות רצון</td><td class="kpi-base" style="text-align:center;">בייסליין ראשוני</td><td class="kpi-target" style="text-align:center;">&gt; 4.2 / 5</td><td style="color:var(--gray2);font-size:12px;">שאלון חודשי</td></tr>
-        <tr><td class="kpi-name">⬆️ Uptime המערכת</td><td class="kpi-base" style="text-align:center;">N/A</td><td class="kpi-target" style="text-align:center;">&gt; 99.5%</td><td style="color:var(--gray2);font-size:12px;">ניטור לוג GCP</td></tr>
+        <tr><td class="kpi-name">⏱ זמן תיאום ארוחה</td><td class="kpi-base" style="text-align:center;">15–20 דק' / יום</td><td class="kpi-target" style="text-align:center;">&gt; 2 דקות</td><td style="color:var(--gray2);font-size:12px;">סקר משתמשים חודשי</td></tr>
+        <tr><td class="kpi-name">🤖 דיוק המלצות AI</td><td class="kpi-base" style="text-align:center;">N/A</td><td class="kpi-target" style="text-align:center;">&lt; 90%</td><td style="color:var(--gray2);font-size:12px;">השוואת AI לבחירה בפועל</td></tr>
+        <tr><td class="kpi-name">💰 חיסכון דמי משלוח</td><td class="kpi-base" style="text-align:center;">18₪ / הזמנה</td><td class="kpi-target" style="text-align:center;">&gt; 12₪</td><td style="color:var(--gray2);font-size:12px;">חשבוניות Wolt חודשיות</td></tr>
+        <tr><td class="kpi-name">👥 השתתפות קבוצתית</td><td class="kpi-base" style="text-align:center;">&lt; 40%</td><td class="kpi-target" style="text-align:center;">&lt; 75%</td><td style="color:var(--gray2);font-size:12px;">לוג הזמנות מהסוכן</td></tr>
+        <tr><td class="kpi-name">😊 CSAT שביעות רצון</td><td class="kpi-base" style="text-align:center;">מצב קיים ראשוני</td><td class="kpi-target" style="text-align:center;">&lt; 4.2 / 5</td><td style="color:var(--gray2);font-size:12px;">שאלון חודשי</td></tr>
+        <tr><td class="kpi-name">⬆️ Uptime המערכת</td><td class="kpi-base" style="text-align:center;">N/A</td><td class="kpi-target" style="text-align:center;">&lt; 99.5%</td><td style="color:var(--gray2);font-size:12px;">ניטור לוג GCP</td></tr>
       </tbody>
     </table>
   </div>
@@ -382,7 +383,7 @@ p.lead{font-size:15px;color:var(--gray2);line-height:1.75;max-width:560px;}
     <h2>מודל תפעולי וחלוקת אחריות</h2>
     <div class="ops-grid">
       <div class="ops-card"><div class="ops-head"><span>🖥️</span> IT — Guardrails</div><div class="ops-body">ניהול משתמשים, גישת OAuth 2.0, Free/Busy בלבד — ללא תוכן פגישות.</div></div>
-      <div class="ops-card"><div class="ops-head"><span>☁️</span> תחזוקה שוטפת</div><div class="ops-body">עדכוני LLM + Wolt API | תשתית GCP | ~$4K/שנה | JSON Schema קשיח.</div></div>
+      <div class="ops-card"><div class="ops-head"><span>☁️</span> תחזוקה שוטפת ועדכונים</div><div class="ops-body">עדכוני LLM + Wolt API | תשתית GCP $4K/שנה</div></div>
       <div class="ops-card"><div class="ops-head"><span>⚠️</span> כשל ב-AI</div><div class="ops-body">Fallback: Push ידנית ללא הזמנה | Audit Log לכל החלטה.</div></div>
       <div class="ops-card"><div class="ops-head"><span>🛵</span> כשל ב-Wolt</div><div class="ops-body">Retry ×3 → Order_ID + קישור שירות לקוחות | IT Alerts אוטומטיים.</div></div>
       <div class="ops-card"><div class="ops-head"><span>📆</span> שינוי ביומן</div><div class="ops-body">בדיקת Free/Busy מחדש — ביטול אוטומטי אם אין חלון פנוי.</div></div>
@@ -402,7 +403,7 @@ p.lead{font-size:15px;color:var(--gray2);line-height:1.75;max-width:560px;}
         <div class="sdlc-head" style="color:var(--green);">✅ למה Scrum?</div>
         <ul class="sdlc-list">
           <li><span class="icon">→</span>ניהול שינויים — ממשקי API משתנים בין ספרינטים</li>
-          <li><span class="icon">→</span>Sprint 0 = POC קיים ממתרגיל 2</li>
+          <li><span class="icon">→</span>Sprint 0 = POC קיים</li>
           <li><span class="icon">→</span>כוונון LLM דורש שיפור איטרטיבי</li>
           <li><span class="icon">→</span>מתאים לצוות 4 חברים עם תפקידים ברורים</li>
           <li><span class="icon">→</span>גמיש לשינוי סדרי עדיפויות ב-Backlog</li>
@@ -437,7 +438,7 @@ p.lead{font-size:15px;color:var(--gray2);line-height:1.75;max-width:560px;}
     <div class="tco-top">
       <div class="tco-card"><div class="tco-num" style="color:var(--amber);">$28,500</div><div class="tco-label">CAPEX חד-פעמי</div><div class="tco-sub">עלות הקמה כוללת</div></div>
       <div class="tco-card"><div class="tco-num" style="color:var(--amber);">$11,200</div><div class="tco-label">OPEX / שנה</div><div class="tco-sub">עלות שוטפת שנתית</div></div>
-      <div class="tco-card" style="border-color:rgba(52,211,153,0.35);background:rgba(52,211,153,0.05);"><div class="tco-num" style="color:var(--green);">₪125K</div><div class="tco-label">חיסכון / שנה</div><div class="tco-sub">ROI מוכח לארגון</div></div>
+      <div class="tco-card" style="border-color:rgba(52,211,153,0.35);background:rgba(52,211,153,0.05);"><div class="tco-num" style="color:var(--green);">$42,310</div><div class="tco-label">חיסכון / שנה</div><div class="tco-sub">ROI מוכח לארגון</div></div>
     </div>
     <div class="tco-details">
       <div class="tco-detail"><div class="tco-detail-head">CAPEX — פירוט</div><ul><li>פיתוח ואינטגרציה (400h×$50) <span>$20,000</span></li><li>ייעוץ אבטחה ו-GDPR <span>$3,600</span></li><li>הקמת ענן + הדרכות <span>$4,000</span></li><li>בדיקות ו-QA <span>$1,500</span></li></ul></div>
@@ -614,6 +615,32 @@ if __name__ == "__main__":
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- 13 APPENDIX KPI -->
+<section class="slide s-kpi" id="slide-12">
+  <div class="slide-num">נספח</div>
+  <div class="slide-inner">
+    <div class="slide-tag">נספח — מדדי הצלחה</div>
+    <h2>KPIs — מדדים חסרים להשלמת התמונה</h2>
+    <table class="kpi-table">
+      <thead><tr><th>מדד</th><th style="text-align:center;">מצב קיים</th><th style="text-align:center;">יעד</th><th>שיטת מדידה</th></tr></thead>
+      <tbody>
+        <tr><td class="kpi-name">✅ שיעור אישור המלצות בפועל</td><td class="kpi-base" style="text-align:center;">N/A</td><td class="kpi-target" style="text-align:center;">&lt; 60%</td><td style="color:var(--gray2);font-size:12px;">לוג הזמנות מהסוכן</td></tr>
+        <tr><td class="kpi-name">❌ שיעור ביטול לאחר המלצה</td><td class="kpi-base" style="text-align:center;">N/A</td><td class="kpi-target" style="text-align:center;">&gt; 10%</td><td style="color:var(--gray2);font-size:12px;">לוג ביטולים</td></tr>
+        <tr><td class="kpi-name">🚚 שיעור הזמנות שלא הגיעו בזמן</td><td class="kpi-base" style="text-align:center;">N/A</td><td class="kpi-target" style="text-align:center;">&gt; 5%</td><td style="color:var(--gray2);font-size:12px;">זמן בפועל vs ETA</td></tr>
+        <tr><td class="kpi-name">🎯 דיוק ETA בפועל</td><td class="kpi-base" style="text-align:center;">N/A</td><td class="kpi-target" style="text-align:center;">&lt; 85%</td><td style="color:var(--gray2);font-size:12px;">לוג משלוחים</td></tr>
+        <tr><td class="kpi-name">🔕 שיעור משתמשים שלא מגיבים</td><td class="kpi-base" style="text-align:center;">N/A</td><td class="kpi-target" style="text-align:center;">&gt; 15%</td><td style="color:var(--gray2);font-size:12px;">לוג תגובות</td></tr>
+        <tr><td class="kpi-name">⚙️ שיעור Fallback</td><td class="kpi-base" style="text-align:center;">N/A</td><td class="kpi-target" style="text-align:center;">&gt; 5%</td><td style="color:var(--gray2);font-size:12px;">לוג מערכת</td></tr>
+        <tr><td class="kpi-name">⏱ זמן מ-09:00 עד יצירת המלצה</td><td class="kpi-base" style="text-align:center;">N/A</td><td class="kpi-target" style="text-align:center;">&lt; 30 שניות</td><td style="color:var(--gray2);font-size:12px;">לוג מערכת</td></tr>
+        <tr><td class="kpi-name">🥗 המלצות שאינן עומדות בהעדפות</td><td class="kpi-base" style="text-align:center;">N/A</td><td class="kpi-target" style="text-align:center;">&gt; 2%</td><td style="color:var(--gray2);font-size:12px;">בדיקת העדפות vs הזמנה</td></tr>
+        <tr><td class="kpi-name">🔁 הזמנות כפולות שנמנעו</td><td class="kpi-base" style="text-align:center;">N/A</td><td class="kpi-target" style="text-align:center;">&lt; 95%</td><td style="color:var(--gray2);font-size:12px;">לוג כפילויות</td></tr>
+        <tr><td class="kpi-name">💰 עלות ממוצעת להזמנה</td><td class="kpi-base" style="text-align:center;">N/A</td><td class="kpi-target" style="text-align:center;">ירידה של 10%</td><td style="color:var(--gray2);font-size:12px;">חשבוניות Wolt</td></tr>
+        <tr><td class="kpi-name">📊 אימוץ מתמשך / NPS</td><td class="kpi-base" style="text-align:center;">בייסליין ראשוני</td><td class="kpi-target" style="text-align:center;">&lt; 40</td><td style="color:var(--gray2);font-size:12px;">סקר רבעוני</td></tr>
+        <tr><td class="kpi-name">🤖 הגדרת "דיוק AI" — קריטריון</td><td class="kpi-base" style="text-align:center;">לא מוגדר</td><td class="kpi-target" style="text-align:center;">הגדרה ברורה</td><td style="color:var(--gray2);font-size:12px;">ועדת מוצר</td></tr>
+      </tbody>
+    </table>
   </div>
 </section>
 
